@@ -1,3 +1,4 @@
+import datetime
 import os
 from modules.twitterApi.index import SendTwitter
 from modules.webScraper.index import ScrapProve
@@ -19,4 +20,10 @@ href_autor = li.a['href']
 quote_autor = my_scrapy.get_quote_autor(href_autor)
 
 # print(quote_autor + ' - ' + name_autor)
-SendTwitter(quote_autor + ' - ' + name_autor)
+
+
+try:
+    SendTwitter(quote_autor + " -" + name_autor)
+    print("Twitte sending succefuli at: " + str(datetime.datetime.now()))
+except BaseException as error:
+    print('An exception occurred: {}'.format(error))
