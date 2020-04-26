@@ -18,5 +18,5 @@ name_autor = li.a.string
 href_autor = li.a['href']
 quote_autor = my_scrapy.get_quote_autor(href_autor)
 
-print(quote_autor + ' - ' + name_autor)
-# SendTwitter(quote_autor + ' - ' + name_autor)
+# print(quote_autor + ' - ' + name_autor)
+SendTwitter(quote_autor + ' - ' + name_autor)
